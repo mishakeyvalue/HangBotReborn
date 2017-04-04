@@ -13,6 +13,7 @@ namespace HangBotReborn
         {
 
             GameBot b = new GameBot(tootee);
+            while(true)
             Thread.Sleep(9999999);
         }
 

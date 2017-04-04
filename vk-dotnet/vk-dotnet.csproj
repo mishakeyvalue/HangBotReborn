@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <Version>1.0.3</Version>
+    <Authors>mitutee</Authors>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hanggame\Hanggame.csproj" />
-    <ProjectReference Include="..\vk-dotnet\vk-dotnet.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
   </ItemGroup>
 
 </Project>
