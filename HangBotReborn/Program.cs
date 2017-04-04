@@ -13,8 +13,11 @@ namespace HangBotReborn
         {
 
             GameBot b = new GameBot(tootee);
-            while(true)
-            Thread.Sleep(9999999);
+            while (true) {
+                Thread.Sleep(35000);
+                tootee.SendTextMessageAsync("414460724", $"Alive at {DateTime.UtcNow}");
+            }
+
         }
 
 
