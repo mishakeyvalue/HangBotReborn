@@ -1,8 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Programming\vk-dotnet-59a656eb400d2479678b550c9856769893f11dca\Hangbot\src\Hanggame\Hanggame.csproj" />
+    <ProjectReference Include="..\..\..\..\Programming\vk-dotnet\vk-dotnet\vk-dotnet.csproj" />
+  </ItemGroup>
 
 </Project>

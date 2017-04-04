@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangBotReborn", "HangBotReborn\HangBotReborn.csproj", "{E32886C9-46DA-45A4-941C-C87C62F55218}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vk-dotnet", "..\..\..\Programming\vk-dotnet\vk-dotnet\vk-dotnet.csproj", "{1E93F347-7642-41A2-9B83-F2EE5AAC5044}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hanggame", "..\..\..\Programming\vk-dotnet-59a656eb400d2479678b550c9856769893f11dca\Hangbot\src\Hanggame\Hanggame.csproj", "{D25F3578-C713-4E7D-9219-C5D735E71DB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E32886C9-46DA-45A4-941C-C87C62F55218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E32886C9-46DA-45A4-941C-C87C62F55218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E32886C9-46DA-45A4-941C-C87C62F55218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E93F347-7642-41A2-9B83-F2EE5AAC5044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E93F347-7642-41A2-9B83-F2EE5AAC5044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E93F347-7642-41A2-9B83-F2EE5AAC5044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E93F347-7642-41A2-9B83-F2EE5AAC5044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25F3578-C713-4E7D-9219-C5D735E71DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25F3578-C713-4E7D-9219-C5D735E71DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25F3578-C713-4E7D-9219-C5D735E71DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25F3578-C713-4E7D-9219-C5D735E71DB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
