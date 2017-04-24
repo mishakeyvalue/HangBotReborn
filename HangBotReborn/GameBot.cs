@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using vk_dotnet;
 using vk_dotnet.Objects;
 
@@ -11,13 +13,14 @@ namespace HangBotReborn
     {
         private BotClient vk_bot;
 
-        private Dictionary<string, CommunicationChannel> games = 
+        private Dictionary<string, CommunicationChannel> games =
             new Dictionary<string, CommunicationChannel>();
 
         public GameBot(BotClient vk_bot)
         {
             this.vk_bot = vk_bot;
             vk_bot.IncomingMessage += HandleNewMessage;
+            Task.Factory.StartNew(_gameGarbageCollector);
             vk_bot.StartListening();
         }
 
@@ -31,7 +34,7 @@ namespace HangBotReborn
 
                 if (games[from].IsDead) {
                     games.Remove(from);
-                   goto start_new_game;
+                    goto start_new_game;
                 }
                 Console.WriteLine("We are playing. Sending data to game input");
                 games[from].Input_Buffer = msg;
@@ -86,6 +89,18 @@ namespace HangBotReborn
         {
             text = (text.ToLower());
             return negativeAnswers.Contains(text);
+        }
+
+        private void _gameGarbageCollector()
+        {
+            while (true) {
+                Thread.Sleep(30000);
+                foreach (var kvp in games) {
+                    if ((kvp.Value.LastTouchedByUser - DateTime.Now).Minutes > 5) {
+                        games.Remove(kvp.Key);
+                    }
+                }
+            }
         }
 
         #region Answers For Negative Answers

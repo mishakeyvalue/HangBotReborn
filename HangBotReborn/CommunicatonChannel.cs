@@ -35,7 +35,7 @@ namespace Hangbot
         private string _input_buffer;
         private string _player;
         private Hanggame.Hanggame _game;
-
+        public DateTime LastTouchedByUser;
 
         //*************************************************************************************************
         //                         Event sending
@@ -79,6 +79,7 @@ namespace Hangbot
                 // Accessed by user
                 string temp = _output_buffer;
                 _output_buffer = "";
+                LastTouchedByUser = DateTime.Now;
                 return temp;
             }
 
@@ -104,7 +105,8 @@ namespace Hangbot
 
             set {
                 // Accessed by user
-                _input_buffer = FuckingDeserealizationOfQuotesAndSlashesKostyl(value);
+                _input_buffer = (value);
+                LastTouchedByUser = DateTime.Now;
                 waiter.Set();
             }
         }
@@ -143,6 +145,6 @@ namespace Hangbot
             }
         }
 
-
+       
     }
 }

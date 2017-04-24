@@ -7,7 +7,7 @@ namespace HangBotReborn
 {
     class Program
     {
-        private static string _t = "";
+        private static string _t = "cb8a8c455efa18e4d57cde56e25bb66dc56a33d56eae17d9ddade834c88fe21c5e052b114d1ab89869fbe";
         private static BotClient tootee = new BotClient(_t);
         static void Main(string[] args)
         {
