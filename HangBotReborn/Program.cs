@@ -1,6 +1,8 @@
 ﻿using Hanggame;
 using System;
+
 using System.Threading;
+using System.Threading.Tasks;
 using vk_dotnet;
 
 namespace HangBotReborn
@@ -12,7 +14,7 @@ namespace HangBotReborn
         static void Main(string[] args)
         {
 
-            GameBot b = new GameBot(tootee);
+            Task.Factory.StartNew( () => {GameBot b = new GameBot(tootee);});
             while (true) {
                 Thread.Sleep(35000);
                 tootee.SendTextMessageAsync("414460724", $"Alive at {DateTime.UtcNow}");
