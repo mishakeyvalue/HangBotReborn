@@ -94,10 +94,11 @@ namespace HangBotReborn
         private void _gameGarbageCollector()
         {
             while (true) {
-                Thread.Sleep(30000);
+                Thread.Sleep(3000);
                 foreach (var kvp in games) {
-                    if ((kvp.Value.LastTouchedByUser - DateTime.Now).Minutes > 5) {
+                    if ((DateTime.Now - kvp.Value.LastTouchedByUser).Minutes > 5) {
                         games.Remove(kvp.Key);
+                        break;
                     }
                 }
             }
