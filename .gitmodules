@@ -1,0 +1,3 @@
+[submodule "vk-dotnet"]
+	path = vk-dotnet
+	url = https://github.com/mitutee/vk-dotnet.git
