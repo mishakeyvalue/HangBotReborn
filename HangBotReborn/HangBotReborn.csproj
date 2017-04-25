@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hanggame\Hanggame.csproj" />
-    <ProjectReference Include="..\vk-dotnet\vk-dotnet.csproj" />
+    <ProjectReference Include="..\vk-dotnet\vk-dotnet\vk-dotnet.csproj" />
   </ItemGroup>
 
 </Project>

@@ -19,9 +19,9 @@ namespace HangBotReborn
         public GameBot(BotClient vk_bot)
         {
             this.vk_bot = vk_bot;
-            vk_bot.IncomingMessage += HandleNewMessage;
+            vk_bot.IncommingTextMessage += HandleNewMessage;
             Task.Factory.StartNew(_gameGarbageCollector);
-            vk_bot.StartListening();
+            vk_bot.StartListeningAsync();
         }
 
         private void HandleNewMessage(BotClient sender, Message e)
