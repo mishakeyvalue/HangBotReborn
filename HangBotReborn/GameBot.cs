@@ -26,7 +26,7 @@ namespace HangBotReborn
 
         private void HandleNewMessage(BotClient sender, Message e)
         {
-            string from = e.User_id.ToString();
+            string from = e.Peer_id;
             string msg = e.Body;
             /// Game is already running;
             /// Keep playing;
